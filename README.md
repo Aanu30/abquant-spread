@@ -212,7 +212,7 @@ export SPREAD_KEY=...                                          # your team key
 | [docs/DETAILS.md](docs/DETAILS.md) | The long version: every step, every test, what failed and why |
 | [experiments](experiments/) | What we tried after the final, with the backtest |
 | `final_run/` | The final as it happened: the console, and our log of every quote, gig and booking |
-| `other_build/` | The team's second bot, built alongside this one as a comparison |
+| `other_build/` | The team's first bot (v1 to v4): the yardstick this bot was tested against, and the spare for the final |
 | `submission/` | The jury deck and the answers we prepared for questions |
 | `coordination/` | The shared log of the build: who tested what, when, and with what result |
 | `proposals/` | The project proposal this page follows |

@@ -1,8 +1,8 @@
 # The other build (v1 to v4)
 
 This is the first of the two desks built for Spread, made in parallel with the ABQuant desk at the repository root. The
-ABQuant desk started from a copy of v4 and went further, and it played the final. v4 was kept as the fallback for the
-final and was never needed.
+ABQuant desk was written separately, not from this code. It was ahead on the same practice weeks, so it played the later
+ranking rounds and the final. v4 was kept as the fallback for the final and was never needed.
 
 ## How it prices
 
