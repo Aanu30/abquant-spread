@@ -27,14 +27,14 @@ organisers' own system makes about 12,850 a week and the kit's starter loses 72,
 Quote the price that makes the most money on average:
 
 ```math
-p^{*} \;=\; \arg\max_{p}\;\; \underbrace{P(p)}_{\text{chance the dealer says yes}} \times \Big[\, \underbrace{p\,(1-\pi r)}_{\text{price we keep}} \;-\; \underbrace{c}_{\text{what the car costs us}} \,\Big]
+p^{*} \;=\; \arg\max_{p}\;\; \underbrace{P(p)}_{\text{chance of a yes}} \times \Big[\, \underbrace{p\,(1-\pi r)}_{\text{price we keep}} \;-\; \underbrace{c}_{\text{cost}} \,\Big]
 ```
 
 ```math
 c \;=\; \underbrace{\hat f}_{\text{expected driver fee}} \;+\; \underbrace{\pi\,(T+\ell)}_{\text{late risk}} \;+\; \underbrace{\mu(u)}_{\text{scarce drivers}}
 ```
 
-$`\pi`$ is the chance the car is late, $`r`$ the share of the price refunded when it is, $`T`$ the trust a late car
+$`P(p)`$ is the chance the dealer says yes at price $`p`$, and $`c`$ is what the car costs us. $`\pi`$ is the chance the car is late, $`r`$ the share of the price refunded when it is, $`T`$ the trust a late car
 destroys with that dealer, $`\ell`$ the extra a late car costs in driver fees, and $`\mu(u)`$ a charge for using
 drivers that are running out.
 
@@ -175,7 +175,7 @@ the difference is the change and nothing else. Over $`n`$ weeks with margins $`m
 ```math
 \bar d \;=\; \frac{1}{n}\sum_{w=1}^{n}\left(m_w^{\text{new}}-m_w^{\text{old}}\right),
 \qquad
-\text{se} \;=\; \frac{\operatorname{sd}(d)}{\sqrt{n}}
+\text{se} \;=\; \frac{\mathrm{sd}(d)}{\sqrt{n}}
 ```
 
 A change stayed only if $`\bar d`$ was clearly above zero and no week fell near the 90% line. Most ideas failed,
