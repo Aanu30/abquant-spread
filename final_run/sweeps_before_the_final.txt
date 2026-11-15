@@ -1,0 +1,292 @@
+20:42 [] == fb_val1: mean margin €12,457/week over 6 weeks, mean won 370, worst on-time 95.8%, ranked 6/6
+20:43 [] == fb_tun1: mean margin €14,933/week over 6 weeks, mean won 401, worst on-time 94.5%, ranked 6/6
+20:55 [] == fb_tim1: mean margin €13,572/week over 12 weeks, mean won 383, worst on-time 94.0%, ranked 12/12
+20:57 []
+tim1 vs base0
+  t     n= 6   14,612 vs  14,933  diff    -320 (se 191)  won 397 vs 401  worst on-time 94.0% vs 94.5%  better in 1/6
+  v     n= 6   12,532 vs  12,457  diff     +74 (se 115)  won 369 vs 370  worst on-time 94.7% vs 95.8%  better in 4/6
+  all   n=12   13,572 vs  13,695  diff    -123 (se 122)  won 383 vs 385  worst on-time 94.0% vs 94.5%  better in 5/12
+21:18 [] == fb_b2: mean margin €13,572/week over 12 weeks, mean won 383, worst on-time 94.0%, ranked 12/12
+21:19 []
+b2 vs tim1
+  t     n= 6   14,612 vs  14,612  diff      +0 (se 0)  won 397 vs 397  worst on-time 94.0% vs 94.0%  better in 0/6
+  v     n= 6   12,532 vs  12,532  diff      +0 (se 0)  won 369 vs 369  worst on-time 94.7% vs 94.7%  better in 0/6
+  all   n=12   13,572 vs  13,572  diff      +0 (se 0)  won 383 vs 383  worst on-time 94.0% vs 94.0%  better in 0/12
+21:19 [cap_rate=0.24] == fb_cr24: mean margin €14,083/week over 12 weeks, mean won 397, worst on-time 92.7%, ranked 12/12
+21:21 [cap_rate=0.24]
+cr24 vs b2
+  t     n= 6   14,987 vs  14,612  diff    +374 (se 314)  won 408 vs 397  worst on-time 92.7% vs 94.0%  better in 4/6
+  v     n= 6   13,180 vs  12,532  diff    +648 (se 268)  won 386 vs 369  worst on-time 94.6% vs 94.7%  better in 5/6
+  all   n=12   14,083 vs  13,572  diff    +511 (se 201)  won 397 vs 383  worst on-time 92.7% vs 94.0%  better in 9/12
+21:21 [reach=30] == fb_r30: mean margin €16,020/week over 12 weeks, mean won 444, worst on-time 93.6%, ranked 12/12
+21:23 [reach=30]
+r30 vs b2
+  t     n= 6   17,059 vs  14,612  diff  +2,446 (se 529)  won 457 vs 397  worst on-time 93.6% vs 94.0%  better in 6/6
+  v     n= 6   14,981 vs  12,532  diff  +2,450 (se 166)  won 430 vs 369  worst on-time 95.6% vs 94.7%  better in 6/6
+  all   n=12   16,020 vs  13,572  diff  +2,448 (se 264)  won 444 vs 383  worst on-time 93.6% vs 94.0%  better in 12/12
+21:23 [reach=60] == fb_r60: mean margin €15,887/week over 12 weeks, mean won 448, worst on-time 91.9%, ranked 12/12
+21:25 [reach=60]
+r60 vs b2
+  t     n= 6   16,699 vs  14,612  diff  +2,087 (se 773)  won 462 vs 397  worst on-time 91.9% vs 94.0%  better in 5/6
+  v     n= 6   15,074 vs  12,532  diff  +2,543 (se 512)  won 434 vs 369  worst on-time 96.1% vs 94.7%  better in 6/6
+  all   n=12   15,887 vs  13,572  diff  +2,315 (se 448)  won 448 vs 383  worst on-time 91.9% vs 94.0%  better in 11/12
+21:25 [reach=30 cap_rate=0.24] == fb_r30c24: mean margin €15,758/week over 12 weeks, mean won 444, worst on-time 92.1%, ranked 12/12
+21:27 [reach=30 cap_rate=0.24]
+r30c24 vs b2
+  t     n= 6   16,624 vs  14,612  diff  +2,012 (se 519)  won 456 vs 397  worst on-time 92.1% vs 94.0%  better in 6/6
+  v     n= 6   14,892 vs  12,532  diff  +2,361 (se 383)  won 432 vs 369  worst on-time 92.7% vs 94.7%  better in 6/6
+  all   n=12   15,758 vs  13,572  diff  +2,186 (se 312)  won 444 vs 383  worst on-time 92.1% vs 94.0%  better in 12/12
+21:25 [reach=45] == fb_r45: mean margin €15,863/week over 12 weeks, mean won 446, worst on-time 94.5%, ranked 12/12
+21:27 [reach=45]
+r45 vs r30
+  t     n= 6   16,910 vs  17,059  diff    -148 (se 402)  won 460 vs 457  worst on-time 94.5% vs 93.6%  better in 2/6
+  v     n= 6   14,816 vs  14,981  diff    -165 (se 264)  won 432 vs 430  worst on-time 95.1% vs 95.6%  better in 2/6
+  all   n=12   15,863 vs  16,020  diff    -157 (se 229)  won 446 vs 444  worst on-time 94.5% vs 93.6%  better in 4/12
+21:28 [reach=30 pi_u=0.3] == fb_r30pu: mean margin €15,753/week over 12 weeks, mean won 433, worst on-time 95.0%, ranked 12/12
+21:30 [reach=30 pi_u=0.3]
+r30pu vs r30
+  t     n= 6   16,729 vs  17,059  diff    -330 (se 272)  won 446 vs 457  worst on-time 95.0% vs 93.6%  better in 2/6
+  v     n= 6   14,777 vs  14,981  diff    -204 (se 131)  won 420 vs 430  worst on-time 95.7% vs 95.6%  better in 1/6
+  all   n=12   15,753 vs  16,020  diff    -267 (se 145)  won 433 vs 444  worst on-time 95.0% vs 93.6%  better in 3/12
+21:30 [reach=30 pair_posted=1] == fb_r30pp: mean margin €15,963/week over 12 weeks, mean won 444, worst on-time 93.0%, ranked 12/12
+21:31 [reach=30 pair_posted=1]
+r30pp vs r30
+  t     n= 6   16,965 vs  17,059  diff     -94 (se 177)  won 458 vs 457  worst on-time 93.0% vs 93.6%  better in 2/6
+  v     n= 6   14,961 vs  14,981  diff     -21 (se 77)  won 430 vs 430  worst on-time 95.6% vs 95.6%  better in 2/6
+  all   n=12   15,963 vs  16,020  diff     -57 (se 93)  won 444 vs 444  worst on-time 93.0% vs 93.6%  better in 4/12
+21:31 [reach=30 pair_posted=1 skew=1] == fb_r30sk: mean margin €15,309/week over 12 weeks, mean won 549, worst on-time 92.4%, ranked 12/12
+21:33 [reach=30 pair_posted=1 skew=1]
+r30sk vs r30
+  t     n= 6   15,931 vs  17,059  diff  -1,128 (se 400)  won 564 vs 457  worst on-time 92.4% vs 93.6%  better in 1/6
+  v     n= 6   14,687 vs  14,981  diff    -294 (se 257)  won 534 vs 430  worst on-time 93.2% vs 95.6%  better in 2/6
+  all   n=12   15,309 vs  16,020  diff    -711 (se 259)  won 549 vs 444  worst on-time 92.4% vs 93.6%  better in 3/12
+21:33 [reach=30 pair_open0=0.6] == fb_r30po: mean margin €15,412/week over 12 weeks, mean won 432, worst on-time 92.7%, ranked 12/12
+21:35 [reach=30 pair_open0=0.6]
+r30po vs r30
+  t     n= 6   16,477 vs  17,059  diff    -582 (se 339)  won 446 vs 457  worst on-time 92.7% vs 93.6%  better in 1/6
+  v     n= 6   14,346 vs  14,981  diff    -635 (se 185)  won 418 vs 430  worst on-time 95.0% vs 95.6%  better in 1/6
+  all   n=12   15,412 vs  16,020  diff    -609 (se 184)  won 432 vs 444  worst on-time 92.7% vs 93.6%  better in 2/12
+21:35 [reach=30 pair_fee=0.9] == fb_r30pf: mean margin €16,214/week over 12 weeks, mean won 480, worst on-time 93.6%, ranked 12/12
+21:38 [reach=30 pair_fee=0.9]
+r30pf vs r30
+  t     n= 6   17,305 vs  17,059  diff    +246 (se 282)  won 490 vs 457  worst on-time 93.6% vs 93.6%  better in 3/6
+  v     n= 6   15,124 vs  14,981  diff    +142 (se 129)  won 469 vs 430  worst on-time 95.1% vs 95.6%  better in 3/6
+  all   n=12   16,214 vs  16,020  diff    +194 (se 148)  won 480 vs 444  worst on-time 93.6% vs 93.6%  better in 6/12
+21:38 [reach=30 s1=1.15] == fb_r30s1: mean margin €15,907/week over 12 weeks, mean won 440, worst on-time 94.7%, ranked 12/12
+21:40 [reach=30 s1=1.15]
+r30s1 vs r30
+  t     n= 6   17,040 vs  17,059  diff     -19 (se 220)  won 454 vs 457  worst on-time 94.7% vs 93.6%  better in 3/6
+  v     n= 6   14,773 vs  14,981  diff    -208 (se 109)  won 427 vs 430  worst on-time 95.0% vs 95.6%  better in 2/6
+  all   n=12   15,907 vs  16,020  diff    -114 (se 121)  won 440 vs 444  worst on-time 94.7% vs 93.6%  better in 5/12
+21:40 [reach=30 cap_long=0.03] == fb_r30cl: mean margin €15,790/week over 12 weeks, mean won 446, worst on-time 92.8%, ranked 12/12
+21:41 [reach=30 cap_long=0.03]
+r30cl vs r30
+  t     n= 6   16,836 vs  17,059  diff    -222 (se 215)  won 460 vs 457  worst on-time 92.8% vs 93.6%  better in 3/6
+  v     n= 6   14,743 vs  14,981  diff    -238 (se 239)  won 431 vs 430  worst on-time 93.0% vs 95.6%  better in 3/6
+  all   n=12   15,790 vs  16,020  diff    -230 (se 153)  won 446 vs 444  worst on-time 92.8% vs 93.6%  better in 6/12
+21:41 [reach=30 cap_rate=0.15] == fb_r30c15: mean margin €15,986/week over 12 weeks, mean won 439, worst on-time 94.8%, ranked 12/12
+21:43 [reach=30 cap_rate=0.15]
+r30c15 vs r30
+  t     n= 6   17,001 vs  17,059  diff     -58 (se 263)  won 454 vs 457  worst on-time 94.8% vs 93.6%  better in 3/6
+  v     n= 6   14,971 vs  14,981  diff     -11 (se 134)  won 424 vs 430  worst on-time 96.5% vs 95.6%  better in 3/6
+  all   n=12   15,986 vs  16,020  diff     -34 (se 141)  won 439 vs 444  worst on-time 94.8% vs 93.6%  better in 6/12
+21:43 [reach=20] == fb_r20: mean margin €15,624/week over 12 weeks, mean won 438, worst on-time 93.6%, ranked 12/12
+21:44 [reach=20]
+r20 vs r30
+  t     n= 6   16,797 vs  17,059  diff    -262 (se 337)  won 454 vs 457  worst on-time 93.6% vs 93.6%  better in 3/6
+  v     n= 6   14,450 vs  14,981  diff    -531 (se 201)  won 421 vs 430  worst on-time 95.8% vs 95.6%  better in 1/6
+  all   n=12   15,624 vs  16,020  diff    -396 (se 191)  won 438 vs 444  worst on-time 93.6% vs 93.6%  better in 4/12
+21:44 [lane_prior=1 lane_set=1] == fb_lpv: mean margin €14,866/week over 6 weeks, mean won 422, worst on-time 95.5%, ranked 6/6
+21:46 [lane_prior=1 lane_set=1]
+lpv vs r30
+  v     n= 6   14,866 vs  14,981  diff    -116 (se 173)  won 422 vs 430  worst on-time 95.5% vs 95.6%  better in 1/6
+  all   n= 6   14,866 vs  14,981  diff    -116 (se 173)  won 422 vs 430  worst on-time 95.5% vs 95.6%  better in 1/6
+21:46 [lane_prior=1 lane_set=2] == fb_lpt: mean margin €17,116/week over 6 weeks, mean won 457, worst on-time 93.8%, ranked 6/6
+21:47 [lane_prior=1 lane_set=2]
+lpt vs r30
+  t     n= 6   17,116 vs  17,059  diff     +57 (se 374)  won 457 vs 457  worst on-time 93.8% vs 93.6%  better in 3/6
+  all   n= 6   17,116 vs  17,059  diff     +57 (se 374)  won 457 vs 457  worst on-time 93.8% vs 93.6%  better in 3/6
+21:47 [pair_rt0=0.62] == fb_rt62: mean margin €16,059/week over 12 weeks, mean won 441, worst on-time 94.0%, ranked 12/12
+21:49 [pair_rt0=0.62]
+rt62 vs r30
+  t     n= 6   16,970 vs  17,059  diff     -89 (se 243)  won 455 vs 457  worst on-time 94.0% vs 93.6%  better in 3/6
+  v     n= 6   15,148 vs  14,981  diff    +167 (se 146)  won 428 vs 430  worst on-time 95.8% vs 95.6%  better in 4/6
+  all   n=12   16,059 vs  16,020  diff     +39 (se 141)  won 441 vs 444  worst on-time 94.0% vs 93.6%  better in 7/12
+21:49 [pair_reserve=1] == fb_rv: mean margin €16,091/week over 12 weeks, mean won 443, worst on-time 94.3%, ranked 12/12
+21:51 [pair_reserve=1]
+rv vs r30
+  t     n= 6   17,136 vs  17,059  diff     +77 (se 118)  won 457 vs 457  worst on-time 94.3% vs 93.6%  better in 4/6
+  v     n= 6   15,047 vs  14,981  diff     +65 (se 228)  won 430 vs 430  worst on-time 95.0% vs 95.6%  better in 4/6
+  all   n=12   16,091 vs  16,020  diff     +71 (se 122)  won 443 vs 444  worst on-time 94.3% vs 93.6%  better in 8/12
+21:51 [guard_below=0.95] == fb_gd: mean margin €16,026/week over 12 weeks, mean won 444, worst on-time 93.6%, ranked 12/12
+21:53 [guard_below=0.95]
+gd vs r30
+  t     n= 6   17,071 vs  17,059  diff     +13 (se 13)  won 457 vs 457  worst on-time 93.6% vs 93.6%  better in 1/6
+  v     n= 6   14,981 vs  14,981  diff      +0 (se 0)  won 430 vs 430  worst on-time 95.6% vs 95.6%  better in 0/6
+  all   n=12   16,026 vs  16,020  diff      +6 (se 6)  won 444 vs 444  worst on-time 93.6% vs 93.6%  better in 1/12
+21:53 [regime_v=2] == fb_rg2: mean margin €15,754/week over 12 weeks, mean won 437, worst on-time 94.7%, ranked 12/12
+21:56 [regime_v=2]
+rg2 vs r30
+  t     n= 6   16,669 vs  17,059  diff    -390 (se 427)  won 450 vs 457  worst on-time 94.7% vs 93.6%  better in 2/6
+  v     n= 6   14,839 vs  14,981  diff    -143 (se 285)  won 424 vs 430  worst on-time 95.4% vs 95.6%  better in 1/6
+  all   n=12   15,754 vs  16,020  diff    -267 (se 248)  won 437 vs 444  worst on-time 94.7% vs 93.6%  better in 3/12
+21:56 [price_mult=0.98] == fb_pm98: mean margin €15,735/week over 12 weeks, mean won 466, worst on-time 94.7%, ranked 12/12
+21:58 [price_mult=0.98]
+pm98 vs r30
+  t     n= 6   16,681 vs  17,059  diff    -378 (se 351)  won 479 vs 457  worst on-time 94.7% vs 93.6%  better in 2/6
+  v     n= 6   14,789 vs  14,981  diff    -193 (se 374)  won 453 vs 430  worst on-time 95.1% vs 95.6%  better in 3/6
+  all   n=12   15,735 vs  16,020  diff    -285 (se 246)  won 466 vs 444  worst on-time 94.7% vs 93.6%  better in 5/12
+21:58 [price_mult=1.02] == fb_pm102: mean margin €15,587/week over 12 weeks, mean won 415, worst on-time 93.3%, ranked 12/12
+22:00 [price_mult=1.02]
+pm102 vs r30
+  t     n= 6   16,629 vs  17,059  diff    -430 (se 394)  won 428 vs 457  worst on-time 93.3% vs 93.6%  better in 2/6
+  v     n= 6   14,545 vs  14,981  diff    -436 (se 275)  won 402 vs 430  worst on-time 95.7% vs 95.6%  better in 2/6
+  all   n=12   15,587 vs  16,020  diff    -433 (se 229)  won 415 vs 444  worst on-time 93.3% vs 93.6%  better in 4/12
+22:00 [reach=30] == fb_r30s: mean margin €16,613/week over 12 weeks, mean won 456, worst on-time 90.4%, ranked 12/12
+22:02 [reach=30]
+r30s vs r30s
+  all   n=12   16,613 vs  16,613  diff      +0 (se 0)  won 456 vs 456  worst on-time 90.4% vs 90.4%  better in 0/12
+22:02 [fri_mult=0.93] == fb_fri93: mean margin €15,949/week over 12 weeks, mean won 459, worst on-time 93.5%, ranked 12/12
+22:05 [fri_mult=0.93]
+fri93 vs r30
+  t     n= 6   16,964 vs  17,059  diff     -95 (se 117)  won 474 vs 457  worst on-time 93.5% vs 93.6%  better in 3/6
+  v     n= 6   14,934 vs  14,981  diff     -48 (se 97)  won 445 vs 430  worst on-time 95.1% vs 95.6%  better in 3/6
+  all   n=12   15,949 vs  16,020  diff     -71 (se 73)  won 459 vs 444  worst on-time 93.5% vs 93.6%  better in 6/12
+22:05 [pair_reserve=1 cap_rate=0.15] == fb_cmb1: mean margin €15,808/week over 12 weeks, mean won 437, worst on-time 95.0%, ranked 12/12
+22:06 [pair_reserve=1 cap_rate=0.15]
+cmb1 vs r30
+  t     n= 6   16,974 vs  17,059  diff     -85 (se 131)  won 454 vs 457  worst on-time 95.0% vs 93.6%  better in 3/6
+  v     n= 6   14,641 vs  14,981  diff    -340 (se 251)  won 420 vs 430  worst on-time 95.1% vs 95.6%  better in 2/6
+  all   n=12   15,808 vs  16,020  diff    -212 (se 140)  won 437 vs 444  worst on-time 95.0% vs 93.6%  better in 5/12
+22:06 [fri_mult=0.97] == fb_fri97: mean margin €15,969/week over 12 weeks, mean won 450, worst on-time 92.3%, ranked 12/12
+22:08 [fri_mult=0.97]
+fri97 vs r30
+  t     n= 6   16,839 vs  17,059  diff    -219 (se 109)  won 463 vs 457  worst on-time 92.3% vs 93.6%  better in 0/6
+  v     n= 6   15,099 vs  14,981  diff    +117 (se 76)  won 438 vs 430  worst on-time 95.4% vs 95.6%  better in 4/6
+  all   n=12   15,969 vs  16,020  diff     -51 (se 81)  won 450 vs 444  worst on-time 92.3% vs 93.6%  better in 4/12
+22:08 [pi_same=0.9 brake_k=0.02 pi_later=0.25 cap_rate=0.15 pair_reserve=1] == fb_otA: mean margin €16,254/week over 24 weeks, mean won 429, worst on-time 93.3%, ranked 24/24
+22:12 [pi_same=0.9 brake_k=0.02 pi_later=0.25 cap_rate=0.15 pair_reserve=1]
+otA vs b24
+  t     n= 6   16,650 vs  17,059  diff    -409 (se 268)  won 438 vs 457  worst on-time 95.5% vs 93.6%  better in 2/6
+  v     n= 6   14,601 vs  14,981  diff    -380 (se 247)  won 406 vs 430  worst on-time 96.4% vs 95.6%  better in 1/6
+  s     n=12   16,881 vs  16,613  diff    +268 (se 197)  won 435 vs 456  worst on-time 93.3% vs 90.4%  better in 8/12
+  all   n=24   16,254 vs  16,317  diff     -63 (se 146)  won 429 vs 450  worst on-time 93.3% vs 90.4%  better in 11/24
+22:12 [brake_k=0.02 cap_rate=0.15 pair_reserve=1] == fb_otB: mean margin €16,675/week over 24 weeks, mean won 444, worst on-time 94.1%, ranked 24/24
+22:16 [brake_k=0.02 cap_rate=0.15 pair_reserve=1]
+otB vs b24
+  t     n= 6   17,248 vs  17,059  diff    +189 (se 80)  won 450 vs 457  worst on-time 94.4% vs 93.6%  better in 5/6
+  v     n= 6   14,784 vs  14,981  diff    -198 (se 192)  won 420 vs 430  worst on-time 96.2% vs 95.6%  better in 2/6
+  s     n=12   17,335 vs  16,613  diff    +722 (se 161)  won 453 vs 456  worst on-time 94.1% vs 90.4%  better in 11/12
+  all   n=24   16,675 vs  16,317  diff    +359 (se 123)  won 444 vs 450  worst on-time 94.1% vs 90.4%  better in 18/24
+22:16 [pi_same=0.9 brake_k=0.02 cap_rate=0.15 pair_reserve=1] == fb_otC: mean margin €16,456/week over 24 weeks, mean won 437, worst on-time 93.4%, ranked 24/24
+22:20 [pi_same=0.9 brake_k=0.02 cap_rate=0.15 pair_reserve=1]
+otC vs b24
+  t     n= 6   17,091 vs  17,059  diff     +32 (se 88)  won 447 vs 457  worst on-time 94.8% vs 93.6%  better in 3/6
+  v     n= 6   14,602 vs  14,981  diff    -379 (se 261)  won 411 vs 430  worst on-time 95.6% vs 95.6%  better in 2/6
+  s     n=12   17,066 vs  16,613  diff    +453 (se 216)  won 445 vs 456  worst on-time 93.4% vs 90.4%  better in 8/12
+  all   n=24   16,456 vs  16,317  diff    +140 (se 143)  won 437 vs 450  worst on-time 93.4% vs 90.4%  better in 13/24
+22:20 [long_reach=300 cap_long=0.014] == fb_lr300a: mean margin €16,013/week over 12 weeks, mean won 444, worst on-time 93.0%, ranked 12/12
+22:22 [long_reach=300 cap_long=0.014]
+lr300a vs r30
+  t     n= 6   16,883 vs  17,059  diff    -176 (se 285)  won 456 vs 457  worst on-time 93.0% vs 93.6%  better in 2/6
+  v     n= 6   15,144 vs  14,981  diff    +163 (se 327)  won 432 vs 430  worst on-time 96.1% vs 95.6%  better in 4/6
+  all   n=12   16,013 vs  16,020  diff      -7 (se 213)  won 444 vs 444  worst on-time 93.0% vs 93.6%  better in 6/12
+22:22 [] == fb_f2: mean margin €16,675/week over 24 weeks, mean won 444, worst on-time 94.1%, ranked 24/24
+22:27 []
+f2 vs otB
+  t     n= 6   17,248 vs  17,248  diff      +0 (se 0)  won 450 vs 450  worst on-time 94.4% vs 94.4%  better in 0/6
+  v     n= 6   14,784 vs  14,784  diff      +0 (se 0)  won 420 vs 420  worst on-time 96.2% vs 96.2%  better in 0/6
+  s     n=12   17,335 vs  17,335  diff      +0 (se 0)  won 453 vs 453  worst on-time 94.1% vs 94.1%  better in 0/12
+  all   n=24   16,675 vs  16,675  diff      +0 (se 0)  won 444 vs 444  worst on-time 94.1% vs 94.1%  better in 0/24
+22:28 [pair_fee=0.9] == fb_pf9: mean margin €16,868/week over 24 weeks, mean won 478, worst on-time 92.3%, ranked 24/24
+22:34 [pair_fee=0.9]
+pf9 vs f2
+  t     n= 6   17,599 vs  17,248  diff    +351 (se 622)  won 490 vs 450  worst on-time 95.2% vs 94.4%  better in 4/6
+  v     n= 6   14,981 vs  14,784  diff    +197 (se 191)  won 457 vs 420  worst on-time 96.1% vs 96.2%  better in 3/6
+  s     n=12   17,446 vs  17,335  diff    +111 (se 176)  won 483 vs 453  worst on-time 92.3% vs 94.1%  better in 7/12
+  all   n=24   16,868 vs  16,675  diff    +193 (se 176)  won 478 vs 444  worst on-time 92.3% vs 94.1%  better in 14/24
+22:34 [lane_fee=1 lane_set=1] == fb_lfs: mean margin €17,581/week over 12 weeks, mean won 498, worst on-time 91.0%, ranked 12/12
+22:37 [lane_fee=1 lane_set=1]
+lfs vs f2
+  s     n=12   17,581 vs  17,335  diff    +245 (se 215)  won 498 vs 453  worst on-time 91.0% vs 94.1%  better in 8/12
+  all   n=12   17,581 vs  17,335  diff    +245 (se 215)  won 498 vs 453  worst on-time 91.0% vs 94.1%  better in 8/12
+22:37 [lane_fee=1 lane_set=2] == fb_lft: mean margin €16,357/week over 12 weeks, mean won 488, worst on-time 95.3%, ranked 12/12
+22:40 [lane_fee=1 lane_set=2]
+lft vs f2
+  t     n= 6   17,656 vs  17,248  diff    +408 (se 400)  won 503 vs 450  worst on-time 95.4% vs 94.4%  better in 3/6
+  v     n= 6   15,058 vs  14,784  diff    +274 (se 418)  won 473 vs 420  worst on-time 95.3% vs 96.2%  better in 3/6
+  all   n=12   16,357 vs  16,016  diff    +341 (se 277)  won 488 vs 435  worst on-time 95.3% vs 94.4%  better in 6/12
+22:40 [pool_wait=120] == fb_pw120: mean margin €16,161/week over 24 weeks, mean won 441, worst on-time 94.7%, ranked 24/24
+22:46 [pool_wait=120]
+pw120 vs f2
+  t     n= 6   16,682 vs  17,248  diff    -566 (se 281)  won 447 vs 450  worst on-time 95.2% vs 94.4%  better in 1/6
+  v     n= 6   14,305 vs  14,784  diff    -479 (se 84)  won 419 vs 420  worst on-time 96.2% vs 96.2%  better in 0/6
+  s     n=12   16,830 vs  17,335  diff    -506 (se 175)  won 448 vs 453  worst on-time 94.7% vs 94.1%  better in 3/12
+  all   n=24   16,161 vs  16,675  diff    -514 (se 110)  won 441 vs 444  worst on-time 94.7% vs 94.1%  better in 4/24
+22:46 [brake_k=0.03] == fb_bk3: mean margin €16,694/week over 24 weeks, mean won 443, worst on-time 94.4%, ranked 24/24
+22:52 [brake_k=0.03]
+bk3 vs f2
+  t     n= 6   17,261 vs  17,248  diff     +13 (se 111)  won 449 vs 450  worst on-time 94.7% vs 94.4%  better in 2/6
+  v     n= 6   14,737 vs  14,784  diff     -47 (se 96)  won 419 vs 420  worst on-time 95.7% vs 96.2%  better in 3/6
+  s     n=12   17,389 vs  17,335  diff     +53 (se 48)  won 453 vs 453  worst on-time 94.4% vs 94.1%  better in 7/12
+  all   n=24   16,694 vs  16,675  diff     +18 (se 42)  won 443 vs 444  worst on-time 94.4% vs 94.1%  better in 12/24
+22:52 [s=0.115] == fb_s115: mean margin €16,220/week over 24 weeks, mean won 425, worst on-time 93.7%, ranked 24/24
+22:58 [s=0.115]
+s115 vs f2
+  t     n= 6   17,061 vs  17,248  diff    -187 (se 393)  won 436 vs 450  worst on-time 95.5% vs 94.4%  better in 3/6
+  v     n= 6   14,316 vs  14,784  diff    -468 (se 94)  won 403 vs 420  worst on-time 94.4% vs 96.2%  better in 0/6
+  s     n=12   16,751 vs  17,335  diff    -584 (se 211)  won 431 vs 453  worst on-time 93.7% vs 94.1%  better in 2/12
+  all   n=24   16,220 vs  16,675  diff    -456 (se 144)  won 425 vs 444  worst on-time 93.7% vs 94.1%  better in 5/24
+22:58 [pool_wait=35] == fb_pw35: mean margin €16,559/week over 24 weeks, mean won 443, worst on-time 94.6%, ranked 24/24
+23:03 [pool_wait=35]
+pw35 vs f2
+  t     n= 6   17,175 vs  17,248  diff     -73 (se 285)  won 452 vs 450  worst on-time 95.5% vs 94.4%  better in 4/6
+  v     n= 6   14,882 vs  14,784  diff     +99 (se 295)  won 421 vs 420  worst on-time 95.4% vs 96.2%  better in 3/6
+  s     n=12   17,089 vs  17,335  diff    -246 (se 219)  won 450 vs 453  worst on-time 94.6% vs 94.1%  better in 3/12
+  all   n=24   16,559 vs  16,675  diff    -117 (se 147)  won 443 vs 444  worst on-time 94.6% vs 94.1%  better in 10/24
+23:03 [pool_release=1110] == fb_pr1110: mean margin €16,609/week over 24 weeks, mean won 448, worst on-time 92.1%, ranked 24/24
+23:07 [pool_release=1110]
+pr1110 vs f2
+  t     n= 6   17,099 vs  17,248  diff    -148 (se 323)  won 456 vs 450  worst on-time 94.7% vs 94.4%  better in 2/6
+  v     n= 6   14,721 vs  14,784  diff     -62 (se 282)  won 423 vs 420  worst on-time 93.6% vs 96.2%  better in 3/6
+  s     n=12   17,308 vs  17,335  diff     -28 (se 209)  won 456 vs 453  worst on-time 92.1% vs 94.1%  better in 6/12
+  all   n=24   16,609 vs  16,675  diff     -66 (se 143)  won 448 vs 444  worst on-time 92.1% vs 94.1%  better in 11/24
+23:07 [pool_wait=20] == fb_pw20: mean margin €16,590/week over 24 weeks, mean won 442, worst on-time 94.0%, ranked 24/24
+23:13 [pool_wait=20]
+pw20 vs f2
+  t     n= 6   17,581 vs  17,248  diff    +333 (se 643)  won 454 vs 450  worst on-time 94.8% vs 94.4%  better in 2/6
+  v     n= 6   14,519 vs  14,784  diff    -265 (se 242)  won 416 vs 420  worst on-time 95.2% vs 96.2%  better in 2/6
+  s     n=12   17,131 vs  17,335  diff    -204 (se 209)  won 450 vs 453  worst on-time 94.0% vs 94.1%  better in 6/12
+  all   n=24   16,590 vs  16,675  diff     -85 (se 197)  won 442 vs 444  worst on-time 94.0% vs 94.1%  better in 10/24
+23:13 [] == fb_f2r: mean margin €14,797/week over 2 weeks, mean won 431, worst on-time 94.0%, ranked 2/2
+23:13 []
+f2r vs f2r
+  all   n= 2   14,797 vs  14,797  diff      +0 (se 0)  won 431 vs 431  worst on-time 94.0% vs 94.0%  better in 0/2
+23:13 [skew=1] == fb_skr: mean margin €16,506/week over 24 weeks, mean won 459, worst on-time 92.9%, ranked 24/24
+23:17 [skew=1]
+skr vs f2
+  t     n= 6   17,093 vs  17,248  diff    -155 (se 232)  won 472 vs 450  worst on-time 95.5% vs 94.4%  better in 3/6
+  v     n= 6   14,570 vs  14,784  diff    -214 (se 258)  won 431 vs 420  worst on-time 95.0% vs 96.2%  better in 2/6
+  s     n=12   17,180 vs  17,335  diff    -155 (se 203)  won 467 vs 453  worst on-time 92.9% vs 94.1%  better in 4/12
+  all   n=24   16,506 vs  16,675  diff    -170 (se 128)  won 459 vs 444  worst on-time 92.9% vs 94.1%  better in 9/24
+23:17 [skew=0.5 skew_fee=0.85] == fb_skr5: mean margin €16,594/week over 24 weeks, mean won 456, worst on-time 92.9%, ranked 24/24
+23:22 [skew=0.5 skew_fee=0.85]
+skr5 vs f2
+  t     n= 6   17,377 vs  17,248  diff    +129 (se 429)  won 468 vs 450  worst on-time 95.3% vs 94.4%  better in 4/6
+  v     n= 6   14,865 vs  14,784  diff     +82 (se 119)  won 433 vs 420  worst on-time 96.1% vs 96.2%  better in 4/6
+  s     n=12   17,067 vs  17,335  diff    -268 (se 123)  won 462 vs 453  worst on-time 92.9% vs 94.1%  better in 3/12
+  all   n=24   16,594 vs  16,675  diff     -81 (se 126)  won 456 vs 444  worst on-time 92.9% vs 94.1%  better in 11/24
+03:49 [cap_rate=0.18] == fb_c18: mean margin €16,616/week over 24 weeks, mean won 447, worst on-time 90.4%, ranked 24/24
+03:51 [cap_rate=0.18]
+c18 vs f2
+  t     n= 6   17,218 vs  17,248  diff     -30 (se 124)  won 454 vs 450  worst on-time 96.1% vs 94.4%  better in 3/6
+  v     n= 6   15,171 vs  14,784  diff    +387 (se 140)  won 427 vs 420  worst on-time 95.5% vs 96.2%  better in 5/6
+  s     n=12   17,038 vs  17,335  diff    -297 (se 183)  won 454 vs 453  worst on-time 90.4% vs 94.1%  better in 5/12
+  all   n=24   16,616 vs  16,675  diff     -59 (se 115)  won 447 vs 444  worst on-time 90.4% vs 94.1%  better in 13/24
+03:51 [cap_rate=0.165] == fb_c165: mean margin €16,691/week over 24 weeks, mean won 447, worst on-time 92.0%, ranked 24/24
+03:53 [cap_rate=0.165]
+c165 vs f2
+  t     n= 6   17,281 vs  17,248  diff     +33 (se 162)  won 453 vs 450  worst on-time 94.4% vs 94.4%  better in 3/6
+  v     n= 6   15,044 vs  14,784  diff    +260 (se 85)  won 423 vs 420  worst on-time 94.4% vs 96.2%  better in 6/6
+  s     n=12   17,219 vs  17,335  diff    -116 (se 143)  won 456 vs 453  worst on-time 92.0% vs 94.1%  better in 5/12
+  all   n=24   16,691 vs  16,675  diff     +15 (se 88)  won 447 vs 444  worst on-time 92.0% vs 94.1%  better in 14/24

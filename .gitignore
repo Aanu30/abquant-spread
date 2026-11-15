@@ -1,0 +1,9 @@
+.env
+.env.*
+.venv/
+logs/
+data/worlds/
+data/live_state_*
+__pycache__/
+*.pkl
+.DS_Store

@@ -1,0 +1,26 @@
+91a92,96
+>     # ---- over the budget: a finite price in place of a quote that always loses (experiment, off by default)
+>     over_mu: float = 1.0         # price of scarce drivers for a car over the budget, x typical fee (0 = quote 4x list as before)
+>     over_pi: float = 0.10        # late risk added to such a car
+>     over_long: bool = True       # only for long gigs (83 of the 94 over-budget requests a week are long hauls)
+>     over_cap: float = 2.0        # no price at all past this utilisation: bounds the overshoot (and excludes the 9.9 of a lane with no drivers)
+531a537
+>         over = False
+533,534c539,543
+<             self.why["no driver day" if planned is None else "pool full"] += 1
+<             return None
+---
+>             over = planned is not None and p.over_mu > 0 and planned[1] < p.over_cap and (drive >= p.long_min or not p.over_long)
+>             if not over:
+>                 self.why["no driver day" if planned is None else "pool full"] += 1
+>                 return None
+>             self.why["over budget, priced"] += 1
+545c554,556
+<         if pi > (p.guard_pi if guard else p.pi_max):
+---
+>         if over:
+>             pi = min(0.95, pi + p.over_pi)
+>         if pi > (p.guard_pi if guard else p.pi_max) + (p.over_pi if over else 0.0):
+568a580,581
+>         if over:
+>             mu = p.over_mu * ref                          # past the budget the formula above explodes: a flat, high price instead

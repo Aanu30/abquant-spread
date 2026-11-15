@@ -1,0 +1,116 @@
+--- a/abquant/desk.py
++++ b/abquant/desk.py
+@@ -29,7 +29,7 @@
+ from .env import DATA
+ from .features import FEE_NAMES, LATE_NAMES, car_features, dot, driver_counts, sigmoid
+ from .geo import DAY, Geo, last_pickup, next_open, open_interval
+-from .pairs import pair_audience, pair_stops
++from .pairs import chain_audience, chain_stops, pair_audience, pair_stops
+ from .regime import Regime
+ 
+ 
+@@ -168,6 +168,15 @@
+     pair_weight: float = 1.0     # share of a driver's day that a car which can go in a pair draws from the budget
+     pair_posted: bool = False    # a pooled car may also pair with a car already posted alone that no driver has taken
+     pair_reserve: bool = True    # two pooled cars that make a round trip keep each other: no third car may take one of them
++    # ---- three cars in one gig (an experiment, off): a car that would go up alone joins a one-way pair, before its first car or after its last
++    triple: bool = False
++    triple_open: float = 0.0     # opening fee of a three-car gig, x the three typical fees (0 = as a pair)
++    triple_max: int = 360        # the most planned driving minutes of a three-car gig, the drives between the cars included
++                                 # (one-way pairs of 360 to 450 planned minutes are 4.7% late, under 300 minutes 1 to 2.6%)
++    triple_posted: bool = True   # the third car may be one that is up alone and not taken: it comes down and joins at the end
++    triple_wait: bool = True     # the third car may be one that still waits for a partner of its own
++    triple_loop: bool = False    # only where the third car brings the driver back to where the gig began
++    triple_rt: bool = False      # a round trip may take a third car too (it then no longer ends where it began)
+     # ---- inventory skew (the paper's skew toward flow that offsets what we hold): a request that completes a pair with a car we hold is worth more to us
+     skew: float = 0.0            # share of the partner's fee saving credited to the request (0 = off)
+     skew_fee: float = 0.80       # expected fee of a car with a partner waiting, x typical
+@@ -733,14 +742,60 @@
+                         if plan:
+                             options.append((0 if plan[2] else 1, rank, hop, plan[1], a["id"], b["id"], plan))
+         used = set()
++        chosen = []
+         for _, _, _, _, a, b, plan in sorted(options, key=lambda o: o[:6]):
+             if a not in used and b not in used:
+                 used |= {a, b}
+-                self.post_pair(self.orders[a], self.orders[b], plan)
++                chosen.append(([a, b], plan))
++        if self.p.triple:
++            self.add_thirds(chosen, used, due)
++        for ids, plan in chosen:
++            if len(ids) == 2:
++                self.post_pair(self.orders[ids[0]], self.orders[ids[1]], plan)
++            else:
++                self.post_chain([self.orders[i] for i in ids], plan)
+         for x in due:
+             if x not in used and x in self.pool:
+                 self.post(self.orders[x], undelivered(self.orders[x]))
+ 
++    def add_thirds(self, chosen: list, used: set, due: list) -> None:
++        """A third car for a one-way pair that is about to go up. First a car that would otherwise be alone: one that
++        is due and found no partner, or one that is up alone and not taken (alone, a car costs 1.05 to 1.30 of its
++        typical fee; in a pair 0.76). Then a car that still waits for a partner. It joins before the pair's first car
++        or after its last, wherever it ends or starts close enough, on the day the pair was planned for; a third car
++        that brings the driver back to the start comes first."""
++        p = self.p
++        thirds = [(c, 0, True) for c in due if c not in used and c not in self.mate and c in self.pool]
++        if p.triple_posted:
++            thirds += [(c, 0, False) for c in self.posted_alone() if c not in used]        # had its notification: only at the end
++        if p.triple_wait:
++            thirds += [(c, 1, True) for c in self.pool if c not in used and c not in self.mate and self.pool[c] > self.now]
++        options = []
++        for k, (ids, plan) in enumerate(chosen):
++            if plan[2] and not p.triple_rt:
++                continue                                   # a round trip stays as it is: a third car would break the loop
++            a, b = self.orders[ids[0]], self.orders[ids[1]]
++            a_pu, b_de = a["legs"][0]["pickup"]["placeId"], b["legs"][0]["delivery"]["placeId"]
++            day = plan[0][0]["window"]["from"] // DAY
++            for c, rank, may_lead in thirds:
++                oc = self.orders.get(c)
++                if oc is None or c in ids:
++                    continue
++                c_pu, c_de = oc["legs"][0]["pickup"]["placeId"], oc["legs"][0]["delivery"]["placeId"]
++                for seq, hop in (([a, b, oc], self.geo.minutes(b_de, c_pu)), ([oc, a, b], self.geo.minutes(c_de, a_pu) if may_lead else None)):
++                    if hop is None or hop > p.pair_transfer:
++                        continue
++                    new = chain_stops(self, seq, self.now, p.pair_transfer)
++                    if new is None or new[1] > p.triple_max or (p.triple_loop and not new[2]) or new[0][0]["window"]["from"] // DAY != day:
++                        continue
++                    options.append((0 if new[2] else 1, rank, hop, new[1], k, c, [o["id"] for o in seq], new))
++        taken = set()
++        for _, _, _, _, k, c, ids, new in sorted(options, key=lambda o: o[:6]):
++            if k not in taken and c not in used:
++                taken.add(k)
++                used.add(c)
++                chosen[k] = (ids, new)
++
+     def partner_for(self, req: dict, opt: dict, lpa: int) -> Optional[str]:
+         """A car of ours that waits for a partner (or is up alone, not taken) and can share a driver with this request."""
+         mine = {"id": req["id"], "legs": req["legs"], "deadline": opt["deadline"], "lastPickupAt": lpa}
+@@ -834,6 +889,26 @@
+             self.paired.add(o["id"])
+         self.log.append({"t": now, "kind": "pair", "a": a["id"], "b": b["id"], "drive": drive, "round_trip": round_trip, "ref": total})
+ 
++    def post_chain(self, orders: list, plan: tuple) -> None:
++        """Three cars for one driver, posted as a pair is: one fee for the lot, on the pair's steps."""
++        stops, drive, loop = plan
++        p, now = self.p, self.now
++        for o in orders:                                   # a car that was up alone comes down first
++            for gig_id in self.gigs_of(o["id"]):
++                self.outbox.append({"type": "withdraw", "gigId": gig_id})
++                self.log.append({"t": now, "kind": "joined", "oid": o["id"], "gig": gig_id})
++            self.leg_gigs.pop(o["id"], None)
++        total = sum(self.requests[o["id"]]["referenceFeeCents"] for o in orders)
++        end = stops[0]["window"]["to"]                      # the gig leaves the app when its first window ends
++        opening = min(p.pair_s1, p.triple_open or p.pair_open)
++        steps = [(now, opening)] + [(t, r) for t, r in ((now + p.pair_hold, p.pair_s1), (now + 3 * p.pair_hold, p.pair_s2)) if t < end - 30]
++        schedule = [{"at": int(t), "feeCents": int(total * r + 0.5)} for t, r in steps]
++        self.outbox.append({"type": "post", "stops": stops, "audience": chain_audience(self, orders), "schedule": schedule})
++        for o in orders:
++            self.pool.pop(o["id"], None)
++            self.paired.add(o["id"])
++        self.log.append({"t": now, "kind": "triple", "oids": [o["id"] for o in orders], "drive": drive, "round_trip": loop, "ref": total})
++
+     def unpair(self, gig_id: str, withdraw: bool) -> None:
+         """A pair that found no driver goes back up as two single gigs."""
+         oids = self.orders_of(gig_id)

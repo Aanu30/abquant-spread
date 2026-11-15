@@ -1,0 +1,27 @@
+112a113
+>     long_brake: float = 0.0      # late risk added to a long gig, per long haul of ours that is stuck or came in late in the last day (0 = off)
+406a408
+>         self.late_long: list = []         # minutes at which a long haul of ours was settled late
+553a556,557
+>         if p.long_brake and drive >= p.long_min:
+>             pi = min(0.95, pi + p.long_brake * self.stuck_long())
+769a774,786
+>                 count += 1
+>         return count
+> 
+>     def stuck_long(self) -> int:
+>         """Long hauls of ours that reached their deadline warning with no driver, plus those that came in late in the
+>         last day: a live sign that the few drivers who take long gigs are used up this week."""
+>         count = sum(1 for t in getattr(self, "late_long", []) if t > self.now - DAY)
+>         for oid in self.unbooked:
+>             order = self.orders.get(oid)
+>             if order is None or oid not in self.urgent or oid in self.pool:
+>                 continue
+>             leg = order["legs"][0]
+>             if self.geo.minutes(leg["pickup"]["placeId"], leg["delivery"]["placeId"]) >= self.p.long_min:
+1123a1141,1145
+>                         done = self.orders.get(oid)
+>                         if done is not None and self.geo.minutes(done["legs"][0]["pickup"]["placeId"], done["legs"][0]["delivery"]["placeId"]) >= self.p.long_min:
+>                             if not hasattr(self, "late_long"):
+>                                 self.late_long = []
+>                             self.late_long.append(self.now)

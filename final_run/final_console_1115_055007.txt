@@ -1,0 +1,16 @@
+No final is set yet. Waiting for it.
+Final world f8897dc39a5777bdea007
+[final] started fresh at Mon 00:00, 0 events of history
+[final] Tue 00:05  margin €71  won 86  on time 100.0%  slowest quote batch 154 ms of 207  faults 0  repairs 0
+[final] Wed 00:00  margin €2,247  won 168  on time 93.7%  slowest quote batch 154 ms of 405  faults 0  repairs 0
+[final] Thu 00:00  margin €4,601  won 277  on time 93.8%  slowest quote batch 154 ms of 578  faults 0  repairs 0
+[final] Fri 00:00  margin €9,765  won 370  on time 94.9%  slowest quote batch 155 ms of 799  faults 0  repairs 0
+[final] Sat 00:12  margin €14,121  won 463  on time 94.0%  slowest quote batch 155 ms of 971  faults 0  repairs 0
+[final] Sun 00:02  margin €15,142  won 463  on time 94.5%  slowest quote batch 155 ms of 971  faults 0  repairs 0
+[final] Mon 00:00  margin €15,142  won 463  on time 94.5%  slowest quote batch 155 ms of 971  faults 0  repairs 0
+[final] Tue 00:21  margin €17,160  won 463  on time 94.4%  slowest quote batch 155 ms of 971  faults 0  repairs 0
+[final] Wed 00:00  margin €17,165  won 463  on time 94.4%  slowest quote batch 155 ms of 971  faults 0  repairs 0
+[final] loop ended at Wed 22:00: {"batches": 10610, "quote_batches": 971, "slowest_quote_ms": 154.67500686645508, "slowest_think_ms": 16.18027687072754, "slowest_send_ms": 153.71108055114746, "slowest_save_ms": 101.34506225585938, "largest_batch": 280, "faults": 0, "repairs": 0, "readers": 1, "send_failures": 0}
+END  margin €17,130.10  won 463  on time 94.4%  ranked True
+09:34:18 a final has ended; waiting for the next one
+No final is set yet. Waiting for it.
